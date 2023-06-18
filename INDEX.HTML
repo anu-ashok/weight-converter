@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>WEIGHT CONVERTER</title>
+<style>
+body{
+  background-color:#cdeed6;
+}
+  span {
+    color:rgb(96, 0, 51)
+
+    }
+</style>
+<BODY>
+
+<h2 style="color:crimson"> WEIGHT CONVERTER</h2>
+<p>TYPE A NUMBER TO CONVERT</p>
+
+
+<p>
+    <label style="color:maroon">KILOGRAMS</label>
+    <input id="inputKILOGRAMS" type="number" placeholder="KILOGRAMS"
+    oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+    
+</p>
+
+<p style="color:#73008c">STONES: <span id="outputStones"></span></p>
+<p style="color:#73008c">GRAMS: <span id="outputGrams"></span></p>
+<p style="color:#73008c" >OUNCES: <span id="outputOunces"></span></p>
+<p style="color:#73008c">POUNDS: <span id="outputPounds"></span></p>
+
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputStones").innerHTML=valNum*0.1574;
+  document.getElementById("outputGrams").innerHTML=valNum*1000;
+  document.getElementById("outputOunces").innerHTML=valNum*35.274;
+  document.getElementById("outputPounds").innerHTML=valNum*2.2046;
+}
+</script>
+
+
+
+</BODY>
+</html>
